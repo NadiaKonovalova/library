@@ -1,17 +1,41 @@
 import javax.swing.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.util.Scanner;
 
 public class LibraryManager {
     DbConnector dbConnector = new DbConnector();
+    Scanner scanner = new Scanner(System.in);
+    String again = "y";
+    String action = scanner.nextLine().toString();
+    public void manageBooks() {
+            while (again == "y") {
+                again = JOptionPane.showInputDialog(
+                        new StringBuilder().append("Please choose option:")
+                                .append("\n1. add the book")
+                                .append("\n2. find the book")
+                                .append("\n3. delete the book")
+                                .append("\n4. Exit")
+                                .toString());
+                switch (action) {
+                    case "1":
+                        //add
+                        break;
+                    case "2":
+                        //find
+                        break;
+                    case "3":
+                        //delete
+                        break;
+                }
+            }
+    }
+
     public void addBook(){
-        Book book = new Book();
-        book.setAuthor(this.getUserInput("add the Author"));
-        book.setTitle(this.getUserInput("add the title of the book"));
-        book.setYearOfRelease(this.getUserInput1("add year of book"));
-        book.setLanguage(this.getUserInput("add the language of the book"));
-        book.setGenres(this.getUserInput("add the genre of the book"));
-        book.setCopyOfBook(this.getUserInput1("add the copies of book"));
 
     }
+
+
 
     private Integer getUserInput1(String message1) { return Integer.parseInt(JOptionPane.showInputDialog(null, message1));}
 

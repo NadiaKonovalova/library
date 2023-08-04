@@ -7,6 +7,7 @@ nameSurname varchar(100) not null,
 phoneNumber varchar(50) not null,
 email varchar (100) not null,
 primary key(userId, phoneNumber)
+
 );
 
 SELECT * FROM users;

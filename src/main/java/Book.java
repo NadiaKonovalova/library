@@ -99,7 +99,6 @@ public class Book {
                 "author = " + author + '\n' +
                 "title = " + title + '\n' +
                 "yearOfRelease = " + yearOfRelease +'\n'+
-                "length = " + length +'\n'+
                 "language = " + language + '\n' +
                 "genres = " + genres + '\n' +
                 "_______________________"+ '\n';
